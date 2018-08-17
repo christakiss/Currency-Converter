@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html manifest="convertor.appcache">
+    <head>
+        <title>Travel Rates</title>
+        <meta charset="UTF-8">
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'/>
+        <meta name="mobile-web-app-capable" content="yes"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <link rel="icon" sizes="192x192" href="images/icon.png"/>
+        <link rel="apple-touch-icon" href="images/icon.png"/>
+        <link rel="shortcut icon" href="images/smallicon.png" type="image/x-icon" />
+        <link rel="stylesheet" type="text/css" href="normalize.css"/>
+        <link rel="stylesheet" type="text/css" href="css.css"/>
+        <script src="sidebar.js"></script>
+    </head>
+    <body>
+        <header>Travel Rates</header>
+        <main>
+            <nav id="sidebar" class="sidenav" style="width: 15vw;">
+                <p id="navmenu"><img src="images/menu.png" alt="Menu" width="32" height="32" onclick="openCloseSidebar()"/></p> 
+                <div id="navElements">
+                <p class="navItem" id="fromItem">From:<br>
+                <select id="currencyFrom" size="1">
+                </select>
+                </p>
+                <p class="navItem" id="toItem">To:<br>
+                <select id="currencyTo" size="1">
+                </select>
+                </p>
+                <p class="navItem" id="rateItem">Commission:<br>
+                <select id="commission" size="1">
+                <option value="0" selected>0%</option>
+                <option value="2">2%</option>
+                <option value="4">4%</option>
+                <option value="6">6%</option>
+                </select>
+                </p>
+                </div>
+            </nav>
+            <div id="buttonsDiv">  
+                <span id="display">0 GBP</span>
+                <table><tr>
+                <td><button class="keypadButton" id="seven" value="7" >7</button></td>
+                <td><button class="keypadButton" id="eight" value="8" >8</button></td>
+                <td><button class="keypadButton" id="nine" value="9" >9</button></td>
+                </tr><tr>
+                <td><button class="keypadButton" id="four" value="4" >4</button></td>
+                <td><button class="keypadButton" id="five" value="5" >5</button></td>
+                <td><button class="keypadButton" id="six" value="6" >6</button></td>
+                </tr><tr>
+                <td><button class="keypadButton" id="one" value="1" >1</button></td>
+                <td><button class="keypadButton" id="two" value="2" >2</button></td>
+                <td><button class="keypadButton" id="three" value="3">3</button></td>
+                </tr><tr>
+                <td><button class="keypadButton" id="clear" value="c">C</button></td>
+                <td><button class="keypadButton" id="zero" value="0" >0</button></td>
+                <td><button class="keypadButton" id="convert" value="=">=</button></td>
+                </tr></table>
+            </div>
+        </main>
+        <footer id="footer"></footer>
+        <script src="ConvertorModel.js"></script>
+        <script src="ConvertorView.js"></script>
+        <script src="ConvertorController.js"></script>
+    </body>
+</html>
+
+
